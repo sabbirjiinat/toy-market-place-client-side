@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Registration from "../Pages/SharedPages/Registration/Registration";
 import Login from "../Pages/SharedPages/Login/Login";
+import AddAToy from "../components/AddAToy/AddAToy";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
             {
                 path: 'login',
                 element:<Login></Login>
+            },
+            {
+                path: '/addAToy',
+                element:<AddAToy></AddAToy>
             }
         ]
     }

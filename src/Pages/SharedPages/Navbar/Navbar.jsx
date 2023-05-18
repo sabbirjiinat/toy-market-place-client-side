@@ -4,7 +4,7 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
 
   const handleLogOut = () => {
     logout()
@@ -37,7 +37,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             className={({ isActive }) => (isActive ? "text-blue-700" : "")}
-            to="/allToy"
+            to="/allToys"
           >
             <li className="font-semibold">All Toy</li>
           </NavLink>

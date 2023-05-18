@@ -82,14 +82,8 @@ const AddAToy = () => {
               
               {/* sub category & price  */}
         <div className="w-full flex gap-4 mb-3">
-          {/* <input
-            className="border-2 w-full px-2 py-1 rounded-md"
-            defaultValue=""
-            type="text"
-            placeholder="Seller Name"
-            {...register("sellerName")}
-          /> */}
-                   <select className="border-2 w-full px-2 py-1 rounded-md" {...register("Sub Category")}>
+       
+                   <select className="border-2 w-full px-2 py-1 rounded-md" {...register("SubCategory")}>
         <option value="Electronic Pets">Electronic Pets</option>
         <option value="Dance Mats">Dance Mats</option>
         <option value="Robots">Robots</option>

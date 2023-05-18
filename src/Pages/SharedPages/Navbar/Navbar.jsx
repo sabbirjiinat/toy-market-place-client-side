@@ -1,4 +1,4 @@
-import {  NavLink } from "react-router-dom";
+import {  Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const navigationItems = <div className="md:flex md:space-x-4">
@@ -7,7 +7,7 @@ const Navbar = () => {
         <NavLink to='/blog'><li>Blog</li></NavLink>
     </div>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-gray-200 mb-5">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -16,8 +16,11 @@ const Navbar = () => {
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
              {navigationItems}
             </ul>
-          </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                </div>
+                <Link to='/' className="btn btn-ghost normal-case text-xl">
+                    <img className="h-10" src="https://i.ibb.co/ccyx5bm/logo.png" alt="" />
+                </Link>
+        
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -27,7 +30,7 @@ const Navbar = () => {
         <div className="navbar-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img className="" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </label>
         </div>

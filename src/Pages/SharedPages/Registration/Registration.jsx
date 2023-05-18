@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import LoginWithGoogleOrGithub from "../LoginWithGoogleOrGithub/LoginWithGoogleOrGithub";
+import { updateProfile } from "firebase/auth";
 
 const Registration = () => {
   const { registerWithEmail } = useContext(AuthContext);
@@ -31,7 +32,8 @@ const Registration = () => {
     } else {
       registerWithEmail(email, password)
         .then((result) => {
-          const registeredUser = result.user;
+            const registeredUser = result.user;
+            updateUserProfile(registeredUser,name,photo)
           console.log(registeredUser);
           setUserSuccess("You have Registered Successfully");
           toast("You have Registered successfully");
@@ -41,7 +43,16 @@ const Registration = () => {
           setUserError(error.message);
         });
     }
-  };
+    };
+    
+    const updateUserProfile = (user,name,photo) => {
+        updateProfile(user, {
+            displayName: name,
+            photoURL: photo
+        }).then(() => { }).catch(error => {
+            console.log(error);
+        })
+    }
   return (
     <div className="my-5">
       <h1 className="text-center text-3xl md:text-5xl mb-2 text-gray-700">

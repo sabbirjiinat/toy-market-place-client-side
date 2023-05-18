@@ -4,6 +4,8 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
+import LoginWithGoogleOrGithub from "../LoginWithGoogleOrGithub/LoginWithGoogleOrGithub";
 
 const Registration = () => {
   const { registerWithEmail } = useContext(AuthContext);
@@ -45,8 +47,8 @@ const Registration = () => {
       <h1 className="text-center text-3xl md:text-5xl mb-2 text-gray-700">
         Please Sign Up
       </h1>
-      <form onSubmit={handleRegister} className="md:flex gap-4 p-7  shadow-2xl">
-        <div className="md:w-1/2">
+      <div className="md:flex items-center gap-4 p-7  shadow-2xl">
+        <form onSubmit={handleRegister} className="md:w-1/2">
           <div>
             <label className="label">
               <span className="label-text">Name</span>
@@ -111,11 +113,13 @@ const Registration = () => {
             type="submit"
             value="Sign Up"
           />
-        </div>
+                  <p className="font-bold text-gray-700"><small>Already Have an Account? <Link to='/login' className="text-red-700">Login</Link></small></p>
+                  <LoginWithGoogleOrGithub></LoginWithGoogleOrGithub>
+              </form>
         <div className="md:w-1/2">
           <Lottie animationData={signUp} loop={true} />
         </div>
-      </form>
+      </div>
       <ToastContainer />
     </div>
   );

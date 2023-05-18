@@ -14,7 +14,7 @@ const ToyGallery = () => {
       <h2 className="text-center text-3xl md:text-5xl my-10 text-gray-800">
         CATEGORIES FEATURES
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+      <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {toyGallery?.map((toy) => (
           <ToyCard key={toy._id} toy={toy}></ToyCard>
         ))}

@@ -1,37 +1,32 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
-
 const UpdateMyToy = () => {
   const updateToy = useLoaderData();
-    const { price, description, quantity,_id } = updateToy;
-    const handleUpdateToy = event => {
-        event.preventDefault()
-        const form = event.target;
-        const price = form.price.value;
-        const quantity = form.quantity.value;
-        const description = form.details.value;
-        const updateDetails = { price, quantity, description }
-        console.log(updateDetails);
-        fetch(`http://localhost:5000/toys/${_id}`, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-                
-            },
-            body:JSON.stringify(updateDetails)
-        }).then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if(data.modifiedCount > 0){
-                    Swal.fire(
-                        'Success!',
-                        'Your toy updated successfully!',
-                        'success'
-                      )
-                }
-        })
-    }
+  const { price, description, quantity, _id } = updateToy;
+  const handleUpdateToy = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const price = form.price.value;
+    const quantity = form.quantity.value;
+    const description = form.details.value;
+    const updateDetails = { price, quantity, description };
+    console.log(updateDetails);
+    fetch(`https://electronic-toy-world-server-site.vercel.app/toys/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updateDetails),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire("Success!", "Your toy updated successfully!", "success");
+        }
+      });
+  };
 
   return (
     <div>

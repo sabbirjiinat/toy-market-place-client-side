@@ -2,6 +2,7 @@ import { FaGithub } from 'react-icons/fa';
 import googleLogo from '../../../assets/google.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const LoginWithGoogleOrGithub = () => {
     const { loginWithGoogle } = useContext(AuthContext);
@@ -10,6 +11,7 @@ const LoginWithGoogleOrGithub = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                Swal.fire("Good job!", "You have login successfully!", "success");
             }).catch(error => {
             console.log(error);
         })

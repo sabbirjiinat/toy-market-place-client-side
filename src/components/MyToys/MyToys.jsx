@@ -8,15 +8,16 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys?sellerEmail=${user?.email}`)
+    fetch(
+      `https://electronic-toy-world-server-site.vercel.app/toys?sellerEmail=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setMyToys(data);
       });
   }, [user?.email]);
 
-    
-    // delete toy by id 
+  // delete toy by id
   const handleDeleteToy = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -28,17 +29,18 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toys/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://electronic-toy-world-server-site.vercel.app/toys/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
               const remaining = myToys.filter((myToy) => myToy._id !== id);
               setMyToys(remaining);
-                Swal.fire("Deleted!",
-                    "Your file has been deleted.",
-                    "success");
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
             }
           });
       }

@@ -1,7 +1,10 @@
 
 
 const RobotCard = ({ robot }) => {
-    const { photoURL, price, name, rating } = robot;
+  const { photoURL, price, name, rating } = robot;
+
+  
+
     return (
         <div className="card card-compact  bg-base-100 shadow-2xl h-80">
         <figure><img className="" src={photoURL} alt="Shoes" /></figure>

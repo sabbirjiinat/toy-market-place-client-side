@@ -3,8 +3,9 @@ import ToyCard from "./ToyCard";
 
 const ToyGallery = () => {
   const [toyGallery, setToyGallery] = useState([]);
+
   useEffect(() => {
-    fetch("http://localhost:5000/toyGallery")
+    fetch("https://electronic-toy-world-server-site.vercel.app/toyGallery")
       .then((res) => res.json())
       .then((data) => setToyGallery(data));
   }, []);

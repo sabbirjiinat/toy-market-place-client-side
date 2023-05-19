@@ -1,8 +1,11 @@
 
 
 const ElectronicPetCard = ({ electronicPet }) => {
-    console.log(electronicPet);
-    const { photoURL, price, name, rating } = electronicPet;
+   
+  const { photoURL, price, name, rating } = electronicPet;
+  
+ 
+
     return (
         <div className="card card-compact  bg-base-100 shadow-2xl h-80">
   <figure><img className="" src={photoURL} alt="Shoes" /></figure>

@@ -6,7 +6,7 @@ import Robots from "./Robots/Robots";
 
 const ShopCategory = () => {
   return (
-    <div>
+    <div className="mb-16">
       <h1 className="text-center text-3xl md:text-5xl my-10 text-gray-800">
         Shop by category
       </h1>

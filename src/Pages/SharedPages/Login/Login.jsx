@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import LoginWithGoogleOrGithub from "../LoginWithGoogleOrGithub/LoginWithGoogleOrGithub";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import UseTitle from "../../../Hooks/UseTitle";
 
 const Login = () => {
   const { loginWithEmail } = useContext(AuthContext);
   const [userError, setUserError] = useState(null);
   const [userSuccess, setUserSuccess] = useState(null);
+  UseTitle('Login')
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;

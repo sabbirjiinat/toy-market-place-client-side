@@ -9,17 +9,17 @@ import MyToys from "../components/MyToys/MyToys";
 import UpdateMyToy from "../components/MyToys/UpdateMyToy";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Blog from "../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {
     path: "/",
-        element: <Main></Main>,
-    errorElement:<ErrorPage></ErrorPage>,
+    element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
-            element: <Home></Home>,
-          
+        element: <Home></Home>,
       },
       {
         path: "registration",
@@ -40,8 +40,7 @@ const router = createBrowserRouter([
       {
         path: "/allToys",
         element: <AllToys></AllToys>,
-        loader: () =>
-          fetch("https://electronic-toy-world-server-site.vercel.app/toys"),
+        loader: () => fetch("http://localhost:5000/toys"),
       },
       {
         path: "/myToys",
@@ -55,9 +54,11 @@ const router = createBrowserRouter([
         path: "updateMyToy/:id",
         element: <UpdateMyToy></UpdateMyToy>,
         loader: ({ params }) =>
-          fetch(
-            `https://electronic-toy-world-server-site.vercel.app/toys/${params.id}`
-          ),
+          fetch(`http://localhost:5000/toys/${params.id}`),
+      },
+      {
+        path: "blog",
+        element: <Blog></Blog>,
       },
     ],
   },

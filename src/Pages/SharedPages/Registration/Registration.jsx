@@ -7,11 +7,13 @@ import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import LoginWithGoogleOrGithub from "../LoginWithGoogleOrGithub/LoginWithGoogleOrGithub";
 import { updateProfile } from "firebase/auth";
+import UseTitle from "../../../Hooks/UseTitle";
 
 const Registration = () => {
   const { registerWithEmail } = useContext(AuthContext);
   const [userError, setUserError] = useState(null);
   const [userSuccess, setUserSuccess] = useState(null);
+  UseTitle('Sign Up')
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;

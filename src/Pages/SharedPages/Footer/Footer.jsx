@@ -1,4 +1,7 @@
+
+
 const Footer = () => {
+ 
   return (
 
     <div className="bg-base-300">

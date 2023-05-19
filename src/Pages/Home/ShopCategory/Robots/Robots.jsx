@@ -5,9 +5,7 @@ const Robots = () => {
   const [robots, setRobots] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://electronic-toy-world-server-site.vercel.app/toys/${`Robots`}`
-    )
+    fetch(`http://localhost:5000/toys/${`Robots`}`)
       .then((res) => res.json())
       .then((data) => {
         setRobots(data);

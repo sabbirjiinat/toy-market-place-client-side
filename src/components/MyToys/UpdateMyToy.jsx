@@ -12,7 +12,7 @@ const UpdateMyToy = () => {
     const description = form.details.value;
     const updateDetails = { price, quantity, description };
     console.log(updateDetails);
-    fetch(`https://electronic-toy-world-server-site.vercel.app/toys/${_id}`, {
+    fetch(`http://localhost:5000/toys/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

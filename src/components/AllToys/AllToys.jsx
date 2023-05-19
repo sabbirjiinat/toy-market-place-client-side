@@ -1,11 +1,11 @@
 // import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import AllToysTabularForm from "./allToysTabularForm/allToysTabularForm";
+import UseTitle from "../../Hooks/UseTitle";
 
 const AllToys = () => {
   const allToysData = useLoaderData();
-//   const [allToys, setAllToys] = useState(allToysData);
-//   console.log(allToys);
+ UseTitle('All Toys')
     return (
         <div className="overflow-x-auto w-full">
         <table className="table w-full">

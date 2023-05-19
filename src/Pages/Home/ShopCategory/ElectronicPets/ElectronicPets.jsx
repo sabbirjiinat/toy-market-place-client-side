@@ -5,8 +5,7 @@ const ElectronicPets = () => {
   const [electronicPets, setElectronicPets] = useState([]);
 
   useEffect(() => {
-    fetch(`https://electronic-toy-world-server-site.vercel.app/toys/${'Electronic Pets'}`
-    )
+    fetch(`http://localhost:5000/toys/${"Electronic Pets"}`)
       .then((res) => res.json())
       .then((data) => {
         setElectronicPets(data);

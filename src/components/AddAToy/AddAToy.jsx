@@ -3,10 +3,12 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import UseTitle from "../../Hooks/UseTitle";
 
 const AddAToy = () => {
   const { user } = useContext(AuthContext);
   const { displayName, email } = user || {};
+  UseTitle("Add a Toy");
   const {
     register,
     handleSubmit,
@@ -17,7 +19,7 @@ const AddAToy = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    fetch(`https://electronic-toy-world-server-site.vercel.app/toys`, {
+    fetch(`http://localhost:5000/toys`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

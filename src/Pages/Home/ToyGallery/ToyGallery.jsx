@@ -5,7 +5,7 @@ const ToyGallery = () => {
   const [toyGallery, setToyGallery] = useState([]);
 
   useEffect(() => {
-    fetch("https://electronic-toy-world-server-site.vercel.app/toyGallery")
+    fetch("http://localhost:5000/toyGallery")
       .then((res) => res.json())
       .then((data) => setToyGallery(data));
   }, []);

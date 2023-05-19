@@ -77,6 +77,7 @@ const Registration = () => {
               <span className="label-text">Email</span>
             </label>
             <input
+              required
               type="email"
               name="email"
               placeholder="Email"
@@ -89,6 +90,7 @@ const Registration = () => {
               <span className="label-text">Password</span>
             </label>
             <input
+              required
               type="password"
               name="password"
               placeholder="Password"
@@ -100,6 +102,7 @@ const Registration = () => {
               <span className="label-text">Confirm</span>
             </label>
             <input
+              required
               type="password"
               name="confirm"
               placeholder="Confirm Password"

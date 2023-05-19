@@ -1,12 +1,17 @@
 import { TrashIcon } from "@heroicons/react/24/solid";
-const MyToyTable = ({ myToy,handleDeleteToy}) => {
-//   console.log(myToy);
-  const { photoURL, SubCategory, price, quantity, name,_id } = myToy;
+import { Link } from "react-router-dom";
+
+const MyToyTable = ({ myToy, handleDeleteToy }) => {
+  const { photoURL, SubCategory, price, quantity, name, _id } = myToy;
+
   return (
     <tr>
       <th>
         <label>
-          <TrashIcon onClick={()=>handleDeleteToy(_id)} className="text-red-500 cursor-pointer h-10"></TrashIcon>
+          <TrashIcon
+            onClick={() => handleDeleteToy(_id)}
+            className="text-red-500 cursor-pointer h-10"
+          ></TrashIcon>
         </label>
       </th>
       <td>
@@ -27,9 +32,10 @@ const MyToyTable = ({ myToy,handleDeleteToy}) => {
       <td>{quantity}</td>
       <td>{SubCategory}</td>
       <th>
-        <button htmlFor="my-modal-5" className="bg-sky-400 hover:bg-sky-600 text-base rounded-sm hover:text-gray-100 duration-300 px-2 py-1 font-semibold">
+              <Link to={`/updateMyToy/${_id}`}>
+              <button className="bg-sky-400 hover:bg-sky-600 text-base rounded-sm hover:text-gray-100 duration-300 px-2 py-1 font-semibold">
           Update
-        </button>
+        </button></Link>
       </th>
     </tr>
   );

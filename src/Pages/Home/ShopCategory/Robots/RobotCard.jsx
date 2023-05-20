@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const RobotCard = ({ robot }) => {
-  const { photoURL, price, name, rating } = robot;
+  const { photoURL, price, name, rating,_id } = robot;
 
   
 
@@ -13,7 +14,9 @@ const RobotCard = ({ robot }) => {
                 <p className="font-semibold">Price : {price}</p>
                 <p className="font-semibold">Rating: {rating}</p>
           <div className="">
+            <Link to={`/robot/${_id}`}>
             <button className="bg-sky-400 hover:bg-sky-600  rounded-sm hover:text-gray-100 duration-300 px-2 py-1 font-semibold text-xl w-full">View Details</button>
+            </Link>
           </div>
         </div>
       </div>

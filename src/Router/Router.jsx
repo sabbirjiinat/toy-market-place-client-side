@@ -11,6 +11,8 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Blog from "../Pages/Blog/Blog";
 import SingleDanceMat from "../Pages/Home/ShopCategory/DanceMats/SingleDanceMat";
+import SingleElectronicPets from "../Pages/Home/ShopCategory/ElectronicPets/SingleElectronicPets";
+import SingleRobot from "../Pages/Home/ShopCategory/Robots/SingleRobot";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,16 @@ const router = createBrowserRouter([
       {
         path: 'danceMat/:id',
         element: <PrivateRoute><SingleDanceMat></SingleDanceMat></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+      },
+      {
+        path: 'electronicPets/:id',
+        element: <PrivateRoute><SingleElectronicPets></SingleElectronicPets></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+      },
+      {
+        path: 'robot/:id',
+        element: <PrivateRoute><SingleRobot></SingleRobot></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
       },
       {

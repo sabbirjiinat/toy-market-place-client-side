@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const DanceMatCard = ({ danceMat }) => {
   const { photoURL, price, name, rating, _id } = danceMat;
 
   return (
-    <div className="card card-compact  bg-base-100 shadow-2xl h-80">
+    <div data-aos="fade-left"
+    data-aos-anchor="#example-anchor"
+    data-aos-offset="500"
+    data-aos-duration="1000" className="card card-compact  bg-base-100 shadow-2xl h-80">
       <figure>
         <img className="" src={photoURL} alt="Shoes" />
       </figure>

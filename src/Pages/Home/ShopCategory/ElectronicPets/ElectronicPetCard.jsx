@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 
 const ElectronicPetCard = ({ electronicPet }) => {
@@ -8,7 +11,9 @@ const ElectronicPetCard = ({ electronicPet }) => {
  
 
     return (
-        <div className="card card-compact  bg-base-100 shadow-2xl h-80">
+        <div data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000" className="card card-compact  bg-base-100 shadow-2xl h-80">
   <figure><img className="" src={photoURL} alt="Shoes" /></figure>
   <div className="card-body">
   <h2 className="card-title">Name : {name}</h2>

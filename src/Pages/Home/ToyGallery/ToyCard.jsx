@@ -1,8 +1,11 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const ToyCard = ({ toy }) => {
   // console.log(toy);
   const { image, title } = toy;
   return (
-    <div>
+    <div data-aos="zoom-in-up" data-aos-duration="1000">
       <img
         className="h-52 w-full object-cover hover:h-48 duration-300 hover:w-11/12 hover:mx-auto rounded-sm shadow-2xl"
         src={image}

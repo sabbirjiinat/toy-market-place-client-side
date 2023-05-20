@@ -10,7 +10,9 @@ const AllToys = () => {
   const handleSearchByName = (event) => {
     event.preventDefault();
     const search = event.target.search.value;
-    fetch(`http://localhost:5000/searchByName/${search}`)
+    fetch(
+      `https://electronic-toy-world-server-site.vercel.app/searchByName/${search}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setAllToys(data);
@@ -19,7 +21,13 @@ const AllToys = () => {
   UseTitle("All Toys");
   return (
     <div className="overflow-x-auto w-full">
-      <form onSubmit={handleSearchByName} className="text-center my-6">
+      <form
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+        onSubmit={handleSearchByName}
+        className="text-center my-6"
+      >
         <input
           placeholder="Search By Name or Word"
           className="border-sky-300 border-2 rounded-md py-1 px-2"
@@ -33,7 +41,11 @@ const AllToys = () => {
           value="Search"
         />
       </form>
-      <table className="table w-full">
+      <table
+        data-aos="zoom-out-down"
+        data-aos-duration="500"
+        className="table w-full"
+      >
         {/* head */}
         <thead>
           <tr>

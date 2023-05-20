@@ -34,7 +34,7 @@ const LoginWithGoogleOrGithub = () => {
   return (
     <>
       <div className="divider">OR</div>
-      <div className="flex justify-between">
+      <div className="md:flex justify-between space-y-3 md:space-y-0">
         <button
           onClick={handleGoogleLogin}
           className="flex items-center gap-2 border p-1 text-xl rounded-sm hover:bg-sky-600 hover:text-gray-100 duration-300"

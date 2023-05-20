@@ -5,7 +5,9 @@ const DanceMats = () => {
   const [danceMats, setDanceMats] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myToys?SubCategory=${`Dance Mats`}`)
+    fetch(
+      `https://electronic-toy-world-server-site.vercel.app/myToys?SubCategory=${`Dance Mats`}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setDanceMats(data);

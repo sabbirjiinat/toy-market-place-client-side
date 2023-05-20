@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
+
 
 const DanceMatCard = ({ danceMat }) => {
   const { photoURL, price, name, rating, _id } = danceMat;

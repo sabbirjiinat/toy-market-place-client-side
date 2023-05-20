@@ -9,6 +9,7 @@ import LoginWithGoogleOrGithub from "../LoginWithGoogleOrGithub/LoginWithGoogleO
 import { updateProfile } from "firebase/auth";
 import UseTitle from "../../../Hooks/UseTitle";
 
+
 const Registration = () => {
   const { registerWithEmail } = useContext(AuthContext);
   const [userError, setUserError] = useState(null);
@@ -56,7 +57,7 @@ const Registration = () => {
         })
     }
   return (
-    <div className="my-5">
+    <div data-aos="zoom-in-left"  data-aos-duration="1000" className="my-5 " >
       <h1 className="text-center text-3xl md:text-5xl mb-2 text-gray-700">
         Please Sign Up
       </h1>

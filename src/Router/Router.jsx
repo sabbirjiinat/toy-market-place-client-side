@@ -33,7 +33,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(
+            `https://electronic-toy-world-server-site.vercel.app/toys/${params.id}`
+          ),
       },
       {
         path: "electronicPets/:id",
@@ -43,7 +45,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(
+            `https://electronic-toy-world-server-site.vercel.app/toys/${params.id}`
+          ),
       },
       {
         path: "robot/:id",
@@ -53,7 +57,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(
+            `https://electronic-toy-world-server-site.vercel.app/toys/${params.id}`
+          ),
       },
       {
         path: "registration",
@@ -74,17 +80,20 @@ const router = createBrowserRouter([
       {
         path: "/allToys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("http://localhost:5000/toys"),
+        loader: () =>
+          fetch("https://electronic-toy-world-server-site.vercel.app/toys"),
       },
       {
         path: "allToys/:id",
         element: (
           <PrivateRoute>
-           <SingleToy></SingleToy>
+            <SingleToy></SingleToy>
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(
+            `https://electronic-toy-world-server-site.vercel.app/toys/${params.id}`
+          ),
       },
       {
         path: "/myToys",
@@ -98,7 +107,9 @@ const router = createBrowserRouter([
         path: "updateMyToy/:id",
         element: <UpdateMyToy></UpdateMyToy>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(
+            `https://electronic-toy-world-server-site.vercel.app/toys/${params.id}`
+          ),
       },
       {
         path: "blog",

@@ -10,7 +10,9 @@ const MyToys = () => {
   UseTitle("My Toys");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myToys?sellerEmail=${user?.email}`)
+    fetch(
+      `https://electronic-toy-world-server-site.vercel.app/myToys?sellerEmail=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setMyToys(data);
@@ -29,9 +31,12 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toys/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://electronic-toy-world-server-site.vercel.app/toys/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
@@ -45,7 +50,11 @@ const MyToys = () => {
   };
 
   return (
-    <div className="overflow-x-auto w-full mb-5">
+    <div
+      data-aos="flip-up"
+      data-aos-duration="2000"
+      className="overflow-x-auto w-full mb-5"
+    >
       <table className="table w-full">
         {/* head */}
         <thead>

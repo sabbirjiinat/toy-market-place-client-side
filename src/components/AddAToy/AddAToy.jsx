@@ -19,7 +19,7 @@ const AddAToy = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    fetch(`http://localhost:5000/toys`, {
+    fetch(`https://electronic-toy-world-server-site.vercel.app/toys`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -37,7 +37,11 @@ const AddAToy = () => {
   };
 
   return (
-    <div>
+    <div
+      data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-duration="1000"
+    >
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* register your input into the hook by invoking the "register" function */}
 

@@ -8,7 +8,7 @@ const SingleDanceMat = () => {
     
 
   return (
-    <div className="card lg:card-side bg-base-200 shadow-xl my-10">
+    <div data-aos="zoom-out" data-aos-duration="1000" className="card lg:card-side bg-base-200 shadow-xl my-10">
       <figure>
         <img className="md:w-[30vw] h-full object-cover"
           src={photoURL}

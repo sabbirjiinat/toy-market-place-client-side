@@ -6,7 +6,7 @@ const SingleRobot = () => {
     const { SubCategory, description, name, photoURL, price, quantity, rating, sellerEmail, sellerName, } = singleRobot;
     UseTitle('Robot')
     return (
-        <div className="card lg:card-side bg-base-200 shadow-xl my-10">
+        <div data-aos="zoom-out" data-aos-duration="1000"  className="card lg:card-side bg-base-200 shadow-xl my-10">
         <figure>
           <img className="md:w-[40vw] h-full object-cover"
             src={photoURL}

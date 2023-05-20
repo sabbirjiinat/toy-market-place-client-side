@@ -10,7 +10,7 @@ const MyToys = () => {
   UseTitle('My Toys')
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys?sellerEmail=${user?.email}`)
+    fetch(`http://localhost:5000/myToys?sellerEmail=${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyToys(data);

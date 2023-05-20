@@ -4,7 +4,10 @@ import ElectronicPets from "./ElectronicPets/ElectronicPets";
 import DanceMats from "./DanceMats/DanceMats";
 import Robots from "./Robots/Robots";
 
+
+
 const ShopCategory = () => {
+
   return (
     <div className="mb-16">
       <h1 className="text-center text-3xl md:text-5xl my-10 text-gray-800">

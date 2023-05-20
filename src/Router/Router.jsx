@@ -10,6 +10,7 @@ import UpdateMyToy from "../components/MyToys/UpdateMyToy";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Blog from "../Pages/Blog/Blog";
+import SingleDanceMat from "../Pages/Home/ShopCategory/DanceMats/SingleDanceMat";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: 'danceMat/:id',
+        element: <PrivateRoute><SingleDanceMat></SingleDanceMat></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
       },
       {
         path: "registration",

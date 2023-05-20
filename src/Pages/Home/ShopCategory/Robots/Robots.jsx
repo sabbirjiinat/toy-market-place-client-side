@@ -5,7 +5,7 @@ const Robots = () => {
   const [robots, setRobots] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys/${`Robots`}`)
+    fetch(`http://localhost:5000/myToys?SubCategory=${`Robots`}`)
       .then((res) => res.json())
       .then((data) => {
         setRobots(data);

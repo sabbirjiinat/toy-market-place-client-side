@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { RotatingLines } from "react-loader-spinner";
 
 const PrivateRoute = ({ children }) => {
+  const location = useLocation();
   const { user, loader } = useContext(AuthContext);
   if (loader) {
     return (
@@ -17,10 +18,10 @@ const PrivateRoute = ({ children }) => {
         />
       </div>
     );
-  } else if (user) {
-    return children;
+  } else if (!user) {
+    return <Navigate state={{ from: location }} replace to="/login"></Navigate>;
   } else {
-    return <Navigate to="/login"></Navigate>;
+    return children;
   }
 };
 

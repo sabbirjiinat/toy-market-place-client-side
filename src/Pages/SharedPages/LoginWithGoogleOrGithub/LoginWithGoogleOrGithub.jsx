@@ -3,15 +3,20 @@ import googleLogo from '../../../assets/google.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const LoginWithGoogleOrGithub = () => {
+    const location = useLocation()
+    const navigate = useNavigate()
     const { loginWithGoogle } = useContext(AuthContext);
+    const from = location.state?.from?.pathname || '/'
     const handleGoogleLogin = () => {
         loginWithGoogle()
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 Swal.fire("Good job!", "You have login successfully!", "success");
+                navigate(from, {replace:true})
             }).catch(error => {
             console.log(error);
         })

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import login from "../../../../public/login.json";
 import Lottie from "lottie-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import LoginWithGoogleOrGithub from "../LoginWithGoogleOrGithub/LoginWithGoogleOrGithub";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
@@ -11,6 +11,9 @@ const Login = () => {
   const { loginWithEmail } = useContext(AuthContext);
   const [userError, setUserError] = useState(null);
   const [userSuccess, setUserSuccess] = useState(null);
+  const location = useLocation()
+  const navigate = useNavigate()
+  const from = location.state?.from?.pathname || '/';
   UseTitle('Login')
   const handleLogin = (event) => {
     event.preventDefault();
@@ -30,6 +33,7 @@ const Login = () => {
           console.log(loggedUser);
           setUserSuccess("You have Login successfully");
           Swal.fire("Good job!", "You have login successfully!", "success");
+          navigate(from, {replace:true})
         })
         .catch((error) => {
           setUserError(error.message);

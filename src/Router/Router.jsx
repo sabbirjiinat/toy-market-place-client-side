@@ -13,6 +13,7 @@ import Blog from "../Pages/Blog/Blog";
 import SingleDanceMat from "../Pages/Home/ShopCategory/DanceMats/SingleDanceMat";
 import SingleElectronicPets from "../Pages/Home/ShopCategory/ElectronicPets/SingleElectronicPets";
 import SingleRobot from "../Pages/Home/ShopCategory/Robots/SingleRobot";
+import SingleToy from "../components/AllToys/SingleToy";
 
 const router = createBrowserRouter([
   {
@@ -25,19 +26,34 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: 'danceMat/:id',
-        element: <PrivateRoute><SingleDanceMat></SingleDanceMat></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+        path: "danceMat/:id",
+        element: (
+          <PrivateRoute>
+            <SingleDanceMat></SingleDanceMat>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/toys/${params.id}`),
       },
       {
-        path: 'electronicPets/:id',
-        element: <PrivateRoute><SingleElectronicPets></SingleElectronicPets></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+        path: "electronicPets/:id",
+        element: (
+          <PrivateRoute>
+            <SingleElectronicPets></SingleElectronicPets>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/toys/${params.id}`),
       },
       {
-        path: 'robot/:id',
-        element: <PrivateRoute><SingleRobot></SingleRobot></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+        path: "robot/:id",
+        element: (
+          <PrivateRoute>
+            <SingleRobot></SingleRobot>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/toys/${params.id}`),
       },
       {
         path: "registration",
@@ -59,6 +75,16 @@ const router = createBrowserRouter([
         path: "/allToys",
         element: <AllToys></AllToys>,
         loader: () => fetch("http://localhost:5000/toys"),
+      },
+      {
+        path: "allToys/:id",
+        element: (
+          <PrivateRoute>
+           <SingleToy></SingleToy>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/toys/${params.id}`),
       },
       {
         path: "/myToys",

@@ -6,18 +6,14 @@ const AllToysTabularForm = ({ toys }) => {
     return (
     
       <tr>
-        <th>
-          <label>
-            <input type="checkbox" className="checkbox" />
-          </label>
-        </th>
-            <td>{sellerName}</td>
+      
+            {sellerName && <td>{sellerName}</td>}
             <td>{ name}</td>
             <td>{ SubCategory}</td>
             <td>{ price}</td>
             <td>{ quantity}</td>
         <th>
-          <Link to={`/${name}/${_id}`}>
+          <Link to={`/allToys/${_id}`}>
           <button className="bg-sky-400 px-2 py-1 rounded-md hover:bg-sky-600 hover:text-gray-200 duration-300 text-sm ">View Details</button>
           </Link>
         </th>

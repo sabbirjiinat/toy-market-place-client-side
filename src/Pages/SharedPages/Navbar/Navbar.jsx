@@ -107,7 +107,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navigationItems}</ul>
       </div>
-      <div className="navbar-end">
+     {user &&  <div className="navbar-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
             <img
@@ -117,7 +117,7 @@ const Navbar = () => {
             />
           </div>
         </label>
-      </div>
+      </div>}
     </div>
   );
 };

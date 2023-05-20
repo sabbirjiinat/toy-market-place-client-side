@@ -1,5 +1,4 @@
 
-
 const Footer = () => {
  
   return (
@@ -7,9 +6,11 @@ const Footer = () => {
     <div className="bg-base-300">
       <footer className="footer p-10  text-base-content b">
       <div>
-        <img className="h-10" src="https://i.ibb.co/ccyx5bm/logo.png"
+       
+          <img className="h-10" src="https://i.ibb.co/ccyx5bm/logo.png"
           alt="" />
       
+       
         <p>
          <span className="text-xl text-gray-800"> Electronic Toy</span>
           <br />

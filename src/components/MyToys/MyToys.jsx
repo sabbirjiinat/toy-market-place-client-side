@@ -7,7 +7,7 @@ import UseTitle from "../../Hooks/UseTitle";
 const MyToys = () => {
   const [myToys, setMyToys] = useState([]);
   const { user } = useContext(AuthContext);
-  UseTitle('My Toys')
+  UseTitle("My Toys");
 
   useEffect(() => {
     fetch(`http://localhost:5000/myToys?sellerEmail=${user?.email}`)

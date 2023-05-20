@@ -6,16 +6,16 @@ import { useState } from "react";
 
 const AllToys = () => {
   const allToysData = useLoaderData();
-  const [allToys,setAllToys] = useState(allToysData)
-  const handleSearchByName = event => {
-    event.preventDefault()
+  const [allToys, setAllToys] = useState(allToysData);
+  const handleSearchByName = (event) => {
+    event.preventDefault();
     const search = event.target.search.value;
     fetch(`http://localhost:5000/searchByName/${search}`)
-      .then(res => res.json())
-      .then(data => {
-      setAllToys(data);
-    })
-  }
+      .then((res) => res.json())
+      .then((data) => {
+        setAllToys(data);
+      });
+  };
   UseTitle("All Toys");
   return (
     <div className="overflow-x-auto w-full">
@@ -37,9 +37,6 @@ const AllToys = () => {
         {/* head */}
         <thead>
           <tr>
-            <th>
-              <input type="checkbox" className="checkbox" />
-            </th>
             <th>Seller</th>
             <th>Toy Name</th>
             <th>Sub-Category</th>

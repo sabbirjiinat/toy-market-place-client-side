@@ -12,7 +12,7 @@ const ElectronicPets = () => {
       });
   }, []);
   return (
-    <div className="grid grid-cols-3 gap-4 mt-12">
+    <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
       {electronicPets.map((electronicPet) => (
         <ElectronicPetCard
           key={electronicPet._id}

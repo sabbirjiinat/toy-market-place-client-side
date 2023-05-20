@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
 import { RotatingLines } from "react-loader-spinner";
+import Swal from "sweetalert2";
 
 const PrivateRoute = ({ children }) => {
   const location = useLocation();
@@ -19,7 +20,19 @@ const PrivateRoute = ({ children }) => {
       </div>
     );
   } else if (!user) {
-    return <Navigate state={{ from: location }} replace to="/login"></Navigate>;
+    if(!user){
+      Swal.fire({
+        title: 'To see details you have to login',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+    }
+    return <Navigate state={{ from: location }} replace to="/login"></Navigate>
+  
   } else {
     return children;
   }

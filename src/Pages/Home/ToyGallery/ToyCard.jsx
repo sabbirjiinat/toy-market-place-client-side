@@ -2,7 +2,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
 const ToyCard = ({ toy }) => {
-  // console.log(toy);
+
   const { image, title } = toy;
   return (
     <div data-aos="zoom-in-up" data-aos-duration="1000">

@@ -23,7 +23,7 @@ const Registration = () => {
     const password = form.password.value;
     const confirm = form.confirm.value;
     const photo = form.photo.value;
-    console.log(name, email, password, confirm, photo);
+  
 
     setUserError("");
     setUserSuccess("");
@@ -37,12 +37,12 @@ const Registration = () => {
         .then((result) => {
             const registeredUser = result.user;
             updateUserProfile(registeredUser,name,photo)
-          console.log(registeredUser);
+        
           setUserSuccess("You have Registered Successfully");
           toast("You have Registered successfully");
         })
         .catch((error) => {
-          console.log(error);
+      
           setUserError(error.message);
         });
     }

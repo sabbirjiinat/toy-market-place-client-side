@@ -11,7 +11,7 @@ const UpdateMyToy = () => {
     const quantity = form.quantity.value;
     const description = form.details.value;
     const updateDetails = { price, quantity, description };
-    console.log(updateDetails);
+  
     fetch(`https://electronic-toy-world-server-site.vercel.app/toys/${_id}`, {
       method: "PUT",
       headers: {
@@ -21,7 +21,7 @@ const UpdateMyToy = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+      
         if (data.modifiedCount > 0) {
           Swal.fire("Success!", "Your toy updated successfully!", "success");
         }

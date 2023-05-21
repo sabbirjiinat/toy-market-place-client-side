@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const AllToysTabularForm = ({ toys }) => {
-    // console.log(toys);
+
     const { SubCategory,sellerName,name,price,quantity,_id} = toys;
     return (
     

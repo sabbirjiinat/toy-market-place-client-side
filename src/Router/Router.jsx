@@ -80,8 +80,7 @@ const router = createBrowserRouter([
       {
         path: "/allToys",
         element: <AllToys></AllToys>,
-        loader: () =>
-          fetch("https://electronic-toy-world-server-site.vercel.app/toys"),
+    
       },
       {
         path: "allToys/:id",

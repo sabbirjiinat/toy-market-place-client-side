@@ -18,7 +18,7 @@ const AddAToy = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+   
     fetch(`https://electronic-toy-world-server-site.vercel.app/toys`, {
       method: "POST",
       headers: {
@@ -32,7 +32,7 @@ const AddAToy = () => {
           toast("You have added a Toy Successfully");
           reset();
         }
-        console.log(data);
+      
       });
   };
 

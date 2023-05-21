@@ -11,7 +11,7 @@ const ElectronicPetCard = ({ electronicPet }) => {
     return (
         <div data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
-        data-aos-duration="1000" className="card card-compact  bg-base-100 shadow-2xl h-80">
+        data-aos-duration="1000" className="card card-compact  bg-[rgb(227,244,233)] shadow-2xl h-80">
   <figure><img className="" src={photoURL} alt="Shoes" /></figure>
   <div className="card-body">
   <h2 className="card-title">Name : {name}</h2>

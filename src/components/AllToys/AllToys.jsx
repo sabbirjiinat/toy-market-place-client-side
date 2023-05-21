@@ -29,6 +29,7 @@ const AllToys = () => {
         className="text-center my-6"
       >
         <input
+          required
           placeholder="Search By Name or Word"
           className="border-sky-300 border-2 rounded-md py-1 px-2"
           type="text"

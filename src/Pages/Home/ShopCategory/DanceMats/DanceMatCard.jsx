@@ -9,7 +9,7 @@ const DanceMatCard = ({ danceMat }) => {
     <div data-aos="fade-left"
     data-aos-anchor="#example-anchor"
     data-aos-offset="500"
-    data-aos-duration="1000" className="card card-compact  bg-base-100 shadow-2xl h-80">
+    data-aos-duration="1000" className="card card-compact  bg-[rgb(227,244,233)] shadow-2xl h-80">
       <figure>
         <img className="" src={photoURL} alt="Shoes" />
       </figure>

@@ -7,7 +7,7 @@ const TrendCard = ({ trend }) => {
     <div
       data-aos="fade-up"
       data-aos-anchor-placement="top-center"
-      className="card md:h-96 bg-base-300 shadow-xl"
+      className="card md:h-96 bg-[rgb(220,226,203)] shadow-xl"
     >
       <figure>
         <img className="md:h-40 w-full object-cover" src={image} alt="car!" />

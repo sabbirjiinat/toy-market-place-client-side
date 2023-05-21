@@ -9,8 +9,8 @@ import Robots from "./Robots/Robots";
 const ShopCategory = () => {
 
   return (
-    <div className="mb-16">
-      <h1 className="text-center text-3xl md:text-5xl my-10 text-gray-800">
+    <div className="mb-16 bg-[rgb(230,242,246)] py-5">
+      <h1 className="text-center text-3xl md:text-5xl my-10 text-gray-800 font-semibold">
         Shop by category
       </h1>
       <Tabs>

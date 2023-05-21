@@ -3,7 +3,7 @@ const Footer = () => {
  
   return (
 
-    <div className="bg-base-300">
+    <div className="bg-[rgb(209,218,223)]">
       <footer className="footer p-10  text-base-content b">
       <div>
        

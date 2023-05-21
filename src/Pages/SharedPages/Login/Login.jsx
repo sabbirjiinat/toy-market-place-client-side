@@ -44,7 +44,7 @@ const Login = () => {
   };
 
   return (
-    <div data-aos="zoom-in-up"  data-aos-duration="1000" className="mb-5">
+    <div data-aos="zoom-in-up"  data-aos-duration="1000" className="mb-5 bg-[rgb(235,247,250)] ">
       <h1 className="text-center text-3xl md:text-5xl  text-gray-700">
         Please Login
       </h1>

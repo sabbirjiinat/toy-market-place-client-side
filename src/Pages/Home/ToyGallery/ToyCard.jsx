@@ -11,7 +11,7 @@ const ToyCard = ({ toy }) => {
         src={image}
         alt=""
       />
-      <h4 className="text-center my-3 text-xl font-semibold hover:text-red-700 duration-300">
+      <h4 className="text-center my-3 text-xl font-semibold hover:text-red-700 duration-300 cursor-pointer">
         {title}
       </h4>
     </div>

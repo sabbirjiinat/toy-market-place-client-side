@@ -46,7 +46,7 @@ const AddAToy = () => {
         {/* register your input into the hook by invoking the "register" function */}
 
         {/* Toy url & Toy name  */}
-        <div className="w-full flex gap-4 mb-3">
+        <div className="w-full space-y-3 md:space-y-0 md:flex gap-4 mb-3">
           <input
             className="border-2 w-full px-2 py-1 rounded-md"
             defaultValue=""
@@ -65,7 +65,7 @@ const AddAToy = () => {
         </div>
 
         {/* seller name & seller email  */}
-        <div className="w-full flex gap-4 mb-3">
+        <div className="w-full space-y-3 md:space-y-0 md:flex gap-4 mb-3">
           <input
             className="border-2 w-full px-2 py-1 rounded-md"
             defaultValue={displayName}
@@ -84,7 +84,7 @@ const AddAToy = () => {
         </div>
 
         {/* sub category & price  */}
-        <div className="w-full flex gap-4 mb-3">
+        <div className="w-full space-y-3 md:space-y-0 md:flex gap-4 mb-3">
           <select
             className="border-2 w-full px-2 py-1 rounded-md"
             {...register("SubCategory")}
@@ -104,7 +104,7 @@ const AddAToy = () => {
         </div>
 
         {/* rating & quantity  */}
-        <div className="w-full flex gap-4 mb-3">
+        <div className="w-full space-y-3 md:space-y-0 md:flex gap-4 mb-3">
           <input
             className="border-2 w-full px-2 py-1 rounded-md"
             defaultValue=""

@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import UseTitle from "../../Hooks/UseTitle";
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 
 
 const SingleToy = () => {
@@ -19,7 +21,7 @@ const SingleToy = () => {
               <p className="text-gray-700 md:text-xl"><span className="font-semibold">Description :</span> {description}</p>
               <p className="text-gray-700 md:text-xl"><span className="font-semibold">Price :</span> { price}</p>
               <p className="text-gray-700 md:text-xl"><span className="font-semibold">AvailAble Quantity :</span> { quantity}</p>
-              <p className="text-gray-700 md:text-xl"><span className="font-semibold">Rating :</span> { rating}</p>
+              <p className="text-gray-700 md:text-xl flex"><span className="font-semibold">Rating :</span> <Rating style={{ maxWidth: 120 }} value={rating} readOnly />{ rating}</p>
               <p className="text-gray-700 md:text-xl"><span className="font-semibold">Seller name :</span> { sellerName}</p>
               <p className="text-gray-700 md:text-xl"><span className="font-semibold">Seller Email :</span> { sellerEmail}</p>
               <p className="text-gray-700 md:text-xl"><span className="font-semibold">Sub-Category :</span> { SubCategory}</p>

@@ -49,12 +49,12 @@ const AllToys = () => {
         {/* head */}
         <thead>
           <tr>
-            <th>Seller</th>
+            <th>Seller-Name</th>
             <th>Toy Name</th>
             <th>Sub-Category</th>
             <th>Price</th>
-            <th>Available Quantity</th>
-            <th>Details</th>
+            <th>Quantity</th>
+            <th>View-Details</th>
           </tr>
         </thead>
         <tbody>

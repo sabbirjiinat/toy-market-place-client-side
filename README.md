@@ -10,6 +10,8 @@
 
 - Website have a My Toy Page  If a user logs in, they will see the My Toys page, which it will show all the toys information they have added from the Add A Toy page in a tabular form. Each row will have an update and delete button. User can update or delete any toy.
 
+-For all the CRUD operations, show toast/ sweet alert.used AOS package in full website.When data is loading user can see spinner loader.Entire website is responsive except table data.
+
 
 
 

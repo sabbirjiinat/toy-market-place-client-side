@@ -12,9 +12,9 @@ const TrendingToys = () => {
   }, []);
   return (
     <>
-      <div className="flex text-center">
-        <h2 className=" text-4xl">Trending Toys</h2>
-        <div className="badge badge-secondary">NEW</div>
+      <div className="flex justify-center">
+        <h2 className=" text-5xl font-semibold">Trending Toys</h2>
+        <p className="badge badge-secondary">NEW</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-10">
         {trending?.map((trend) => (
